@@ -72,8 +72,8 @@ public class MailingController {
             return new ResponseEntity<>(new SendMailResult(false, "Failed to send email! Bad target address or configuration?"), HttpStatus.INTERNAL_SERVER_ERROR);
         } catch (Exception e) {
             e.printStackTrace();
-            System.out.println("Failed due to known: " + e.getMessage());
-            return new ResponseEntity<>(new SendMailResult(false, "Failed to send email! Critical failure check logs! Send report to https://github.com/wqyeo/Just-Send-The-Mail/issues if codebase issue."), HttpStatus.INTERNAL_SERVER_ERROR);
+            System.out.println("Failed due to unknown error: " + e.getMessage());
+            return new ResponseEntity<>(new SendMailResult(false, "Failed to send email! Bad configuration or check service logs! Send report to https://github.com/wqyeo/Just-Send-The-Mail/issues if codebase issue."), HttpStatus.INTERNAL_SERVER_ERROR);
         }
 
     }
