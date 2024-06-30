@@ -8,6 +8,8 @@ Configure it to connect to an existing account on an SMTP server, then send emai
 
 For really small projects, or simple university projects that requires outgoing email.
 
+> **NOTE:** The sent messages are not stored!
+ 
 #### Javascript Example:
 
 ```javascript
