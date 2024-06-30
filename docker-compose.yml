@@ -1,0 +1,11 @@
+services:
+  mailing-api:
+    build: .
+    ports:
+      - ${EXTERNAL_API_PORT}:8080
+    env_file:
+      - .env
+    environment:
+      - SPRING_PROFILES_ACTIVE=prod
+    volumes:
+      - .:/app
